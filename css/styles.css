@@ -1,3 +1,212 @@
 body {
   background-color: #eee;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: #444;
+  font-weight: normal;
+  line-height: 1.4;
 }
+
+h1 {
+  font-family: "Fleur De Leah", cursive;
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+
+p {
+  font-family: monospace;
+}
+
+img {
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto 0 auto;
+  display: block;
+}
+
+.app-header {
+  border-bottom: 1px solid #999;
+  padding-bottom: 1em;
+}
+.inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.app-logo {
+  display: inline-block;
+  width: 160px;
+}
+.app-navigation {
+  float: right;
+}
+
+/*  links have 4 states
+a:link, a:active, a:visited, a:hover
+*/
+.app-navigation a:link {
+  text-decoration: none;
+  color: #444;
+  padding: 0.3em;
+}
+
+.app-navigation a:active {
+  color: red;
+}
+
+.app-navigation a:visited {
+  color: #444;
+}
+
+.app-navigation a:hover {
+  color: blue;
+}
+
+.app-navigation-drawer {
+  /*hide nav on load*/
+  display: block;
+  background: #fff;
+  padding: 0em;
+  list-style: none;
+  border-bottom: 2px solid green;
+  /* animate: default state on page load */
+  transition: all 0.4s linear;
+  transform: translatey(-150%);
+}
+
+#hamburger-menu:checked ~ .app-navigation-drawer {
+  /*show nav on :checked */
+  display: block;
+  /* animate into page show state */
+  transform: translateX(0%);
+}
+
+.sr-only {
+  display: none;
+}
+
+#hamburger-menu {
+  /* hide the checkbox */
+  display: none;
+}
+
+.app-logo img {
+  width: 160px;
+}
+.color-red {
+  color: red;
+}
+
+.app-sidebar {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+}
+
+form {
+  background-color: beige;
+}
+form label {
+  display: block;
+}
+
+.input-text {
+  border: 2px solid #444;
+  padding: 0.2em;
+  color: #666;
+  border-radius: 6px;
+}
+
+/*
+
+input[type="submit"] {
+  background-color: brown;
+  width: 100%;
+  border-radius: 4px;
+  border: none;
+}
+*/
+input[type="submit"] {
+  background-color: rgb(160, 98, 98);
+  width: 100%;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  padding: 0.5em;
+}
+input[type="submit"]:hover {
+  background-color: pink;
+}
+form h5 {
+  margin-bottom: 5px;
+}
+
+/*
+input[type="tel"] {
+  border: 2px solid blue;
+
+*/
+
+form fieldset {
+  border: 5px dashed green;
+  padding: 0.5em 0 1em 1em;
+  background-color: #fff;
+}
+
+form fieldset legend {
+  font-style: italic;
+  font-size: 2em;
+}
+
+form label {
+  display: block;
+}
+
+.footer {
+  background-color: aqua;
+}
+.footer .column {
+  display: block;
+  width: 20%;
+  border: 1px solid red;
+}
+
+/*
+Moble 320px, Tablet 767px, Desktop 1024px,
+I am a tablet desktop
+*/
+@media screen and (min-width: 767px) {
+  .app-navigation-drawer {
+    transform: translateY(0);
+    background: transparent;
+    border-bottom: none;
+    margin: 0em;
+  }
+
+  .fa-bars {
+    display: none;
+  }
+
+  .app-navigation-drawer li {
+    display: inline-block;
+    margin: 0.5em;
+  }
+
+  .app-article {
+    display: inline-block;
+
+    width: 60%;
+  }
+
+  .app-sidebar {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+  }
+  .footer .column {
+    display: inline-block;
+    width: 20%;
+    border: 1px solid red;
+  }
+}
+/*DESKTOP ENDS HERE*/
